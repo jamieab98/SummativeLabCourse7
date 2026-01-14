@@ -1,6 +1,7 @@
 class User:
-    def __init__(self, username):
+    def __init__(self, username, email):
         self.username = username
+        self.email = email
         self.projects = []
     
     def __repr__(self):
@@ -11,8 +12,10 @@ class User:
         self.projects.append(self.project)
     
 class Project:
-    def __init__(self, project_name):
-        self.project_name = project_name
+    def __init__(self, title, description, due_date):
+        self.title = title
+        self.description = description
+        self.due_date = due_date
         self.tasks = []
     
     def add_task(self, task):
@@ -20,19 +23,20 @@ class Project:
         self.tasks.append(self.task)
     
     def __repr__(self):
-        return self.project_name
+        return self.title
 
 class Task:
-    def __init__(self, task_name):
-        self.task_name = task_name
-        self.complete = False
+    def __init__(self, title):
+        self.title = title
+        self.status = "Incomplete"
+        self.assigned_to = []
     
     def __repr__(self):
         return self.task_name
 
-user1 = User("Jamie Bryson")
-user2 = User("Michael Bedford")
-user3 = User("Bobby Gunshefski")
+user1 = User("Jamie Bryson", "jamieab98@gmail.com")
+user2 = User("Michael Bedford", "pookgoog@yahoo.com")
+user3 = User("Bobby Gunshefski", "bobbyg44@gmail.com")
 
 project1 = Project("Build Website")
 project2 = Project("Make Jamie Happy")

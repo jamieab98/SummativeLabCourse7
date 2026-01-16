@@ -6,8 +6,8 @@ class User:
         self.projects=[]
         User.users.append(self)
 
-    def __repr__(self):
-        return self.name
+    '''def __repr__(self):
+        return self.name'''
     
     def assign_project(self, project):
         self.projects.append(project)
@@ -21,8 +21,8 @@ class Project:
         self.tasks = []
         Project.projects.append(self)
     
-    def __repr__(self):
-        return self.title
+    '''def __repr__(self):
+        return self.title'''
     
     def assign_task(self, task):
         self.tasks.append(task)
@@ -33,11 +33,11 @@ class Task:
         self.title = title
         self.status = "incomplete"
         project.tasks.append(self)
-
         Task.tasks.append(self)
     
-    def __repr__(self):
-        return self.title
+    '''def __repr__(self):
+        return self.title'''
+
 
 user1 = User("Jamie", "jamieab98@gmail.com")
 
